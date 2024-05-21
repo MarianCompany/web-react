@@ -23,8 +23,10 @@ export const PDFPage: FC = () => {
 
   return (
     <>
+      <h1>Form</h1>
       <form onSubmit={handleSubmit(setPdf)}>
         <input
+          data-testid={"input"}
           {...register("comment", {
             required: "Поле обязательно для заполнения",
             minLength: {
@@ -54,7 +56,7 @@ export const PDFPage: FC = () => {
         <div>{errors.username?.message}</div>
         <div>{errors.picture?.message}</div>
 
-        <button type="submit">Сохранить</button>
+        <button type="submit" data-testid={"button-save"}>Сохранить</button>
       </form>
 
       {!!pdf?.username && (

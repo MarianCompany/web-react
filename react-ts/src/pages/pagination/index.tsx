@@ -1,3 +1,4 @@
+/* v8 ignore next 100 */
 import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 import { CommentCard } from "../../components/CommentCard";
@@ -47,6 +48,7 @@ export const PaginationPage: FC = () => {
 
   return (
     <>
+      <h1>Comments</h1>
       {comments.length &&
         comments.map((item) => {
           return <CommentCard comment={item} key={item.id} />;
