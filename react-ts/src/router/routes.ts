@@ -1,5 +1,5 @@
 export default {
-    ROOT: '/',
-    PDF: '/pdf',
-    PAGINATION: '/pagination',
-}
+  ROOT: "/",
+  PDF: "/pdf",
+  PAGINATION: "/pagination",
+};
