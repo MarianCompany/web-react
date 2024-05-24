@@ -1,4 +1,4 @@
-import {FC} from 'react';
+import { FC } from "react";
 import { Document, Page, View, Text, Image, StyleSheet } from "@react-pdf/renderer";
 
 interface IPDFDocumentProps {
@@ -9,16 +9,15 @@ interface IPDFDocumentProps {
 
 const styles = StyleSheet.create({
   page: {
-    flexDirection: 'row',
-    backgroundColor: '#E4E4E4'
+    flexDirection: "row",
+    backgroundColor: "#E4E4E4",
   },
   section: {
     margin: 10,
     padding: 10,
-    flexGrow: 1
-  }
+    flexGrow: 1,
+  },
 });
-
 
 export const PDFDocument: FC<IPDFDocumentProps> = ({ comment, picture, username }) => {
   return (
@@ -31,10 +30,8 @@ export const PDFDocument: FC<IPDFDocumentProps> = ({ comment, picture, username 
           <Text>{name}</Text>
         </View>
 
-        <View style={styles.section}>
-          {picture && <Image src={picture} />}
-        </View>
+        <View style={styles.section}>{picture && <Image src={picture} />}</View>
       </Page>
     </Document>
   );
-}
+};
